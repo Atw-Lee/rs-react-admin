@@ -1,30 +1,31 @@
-/*
- * @Author: atwlee
- * @Date: 2024-12-11 14:55:33
- * @LastEditors: atwlee
- * @LastEditTime: 2024-12-11 17:49:57
- * @Description:
- * @FilePath: /rsbuild-project/src/layout/components/Sider/index.tsx
- */
 import { Layout, Menu } from 'antd';
-import { useRouter } from '@tanstack/react-router';
-import { parseRouteTree } from '@/utils/convert';
+import { useNavigate, useLocation } from '@tanstack/react-router';
+import { useAppStore } from '@/store';
+import { splitPathIntoSegments } from '@/utils/transform';
 
 const { Sider } = Layout;
 function Index() {
-  const router = useRouter();
+  const menu = useAppStore((state) => state.menu);
+  const navigate = useNavigate();
+  const pathname = useLocation({
+    select: (location) => location.pathname,
+  });
 
-  const menu = parseRouteTree(router.routesByPath);
-  console.log('menu', router.routesByPath, menu);
+  const handleClick = ({ key }: { key: string }) => {
+    navigate({
+      to: key,
+    });
+  };
 
   return (
     <Sider>
       <Menu
         mode="inline"
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
-        style={{ height: '100%', borderRight: 0 }}
+        className="h-full"
         items={menu}
+        onClick={handleClick}
+        defaultSelectedKeys={[pathname]}
+        defaultOpenKeys={splitPathIntoSegments(pathname)}
       />
     </Sider>
   );

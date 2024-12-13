@@ -1,17 +1,12 @@
-/*
- * @Author: atwlee
- * @Date: 2024-12-11 11:24:42
- * @LastEditors: atwlee
- * @LastEditTime: 2024-12-11 14:47:08
- * @Description:
- * @FilePath: /rsbuild-project/src/store/app.ts
- */
+import { MenuProps } from 'antd';
 import { create } from 'zustand';
 
 type LayoutType = 'horizontal' | 'side' | 'side-inline' | 'none';
 interface AppState {
   layout: LayoutType;
   setLayout: (layout: LayoutType) => void;
+  menu: MenuProps['items'];
+  setMenu: (menu: MenuProps['items']) => void;
   menuMix: boolean; // Whether the menu is mixed in the navigation bar and sidebar
   setMenuMix: (menuMix: boolean) => void;
 }
@@ -22,6 +17,8 @@ export const useAppStore = create<AppState>((set) => ({
     set({ layout });
     if (layout === 'horizontal') set({ menuMix: false });
   },
+  menu: [],
+  setMenu: (menu: MenuProps['items']) => set({ menu }),
   menuMix: false,
   setMenuMix: (menuMix: boolean) => set({ menuMix }),
 }));

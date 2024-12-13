@@ -1,7 +1,7 @@
 {
     "/dashboard": "Dashboard",
-    "/overview/": "Overview",
+    "/overview": "Overview",
     "/overview/analytics": "Analytics",
-    "/blog/": "Blog",
-    "/blog/articles": "Articles"
+    "/blog": "Blog",
+    "/blog/posts": "Articles"
 }

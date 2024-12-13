@@ -1,11 +1,3 @@
-/*
- * @Author: atwlee
- * @Date: 2024-12-11 10:56:04
- * @LastEditors: atwlee
- * @LastEditTime: 2024-12-11 17:07:41
- * @Description:
- * @FilePath: /rsbuild-project/src/layout/index.tsx
- */
 import { Outlet } from '@tanstack/react-router';
 import { Breadcrumb, Layout } from 'antd';
 import Header from './components/Header';

@@ -1,5 +1,7 @@
 {
     "/dashboard": "工作台",
+    "/overview": "概览",
     "/overview/analytics": "分析页",
-    "/blog/articles": "文章"
+    "/blog": "博客",
+    "/blog/posts": "文章"
 }
