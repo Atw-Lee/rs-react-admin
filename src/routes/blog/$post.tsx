@@ -10,5 +10,6 @@ export const Route = createFileRoute('/blog/$post')({
 });
 
 function RouteComponent() {
-  return <div>Hello "/blog/$post"!</div>;
+  const { post } = Route.useParams();
+  return <div>Hello "/blog/$post"! {post}</div>;
 }

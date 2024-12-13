@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 export const Route = createFileRoute('/blog/posts')({
   component: RouteComponent,
   staticData: {
+    parentName: <FormattedMessage id="/blog" />,
     name: <FormattedMessage id="/blog/posts" />,
     icon: '',
   },
