@@ -1,11 +1,3 @@
-/*
- * @Author: atwlee
- * @Date: 2024-12-10 15:06:45
- * @LastEditors: atwlee
- * @LastEditTime: 2024-12-11 17:37:10
- * @Description:
- * @FilePath: /rsbuild-project/src/App.tsx
- */
 import { RouterProvider } from '@tanstack/react-router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ConfigProvider } from 'antd';

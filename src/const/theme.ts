@@ -1,12 +1,3 @@
-/*
- * @Author: atwlee
- * @Date: 2024-12-11 10:53:09
- * @LastEditors: atwlee
- * @LastEditTime: 2024-12-11 14:20:39
- * @Description:
- * @FilePath: /rsbuild-project/src/const/theme.ts
- */
-
 import { ThemeConfig } from 'antd';
 
 export const theme: ThemeConfig = {
