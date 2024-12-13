@@ -33,6 +33,7 @@ export default [
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      'react/no-unescaped-entities': 'off'
     },
   },
   { ignores: ['dist/', 'src/routeTree.gen.ts'] },

@@ -1,16 +1,9 @@
-/*
- * @Author: atwlee
- * @Date: 2024-12-10 15:06:45
- * @LastEditors: atwlee
- * @LastEditTime: 2024-12-11 10:02:10
- * @Description:
- * @FilePath: /rsbuild-project/rsbuild.config.ts
- */
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 import { pluginLess } from '@rsbuild/plugin-less';
 import { pluginSvgr } from '@rsbuild/plugin-svgr';
 import { TanStackRouterRspack } from '@tanstack/router-plugin/rspack';
+import customScaffolding from './src/const/customScaffolding';
 
 export default defineConfig({
   plugins: [pluginReact(), pluginLess(), pluginSvgr()],
@@ -26,7 +19,11 @@ export default defineConfig({
   },
   tools: {
     rspack: {
-      plugins: [TanStackRouterRspack()],
+      plugins: [
+        TanStackRouterRspack({
+          customScaffolding,
+        }),
+      ],
     },
   },
 });

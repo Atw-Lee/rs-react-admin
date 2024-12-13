@@ -11,15 +11,17 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as AboutImport } from './routes/about'
+import { Route as DashboardImport } from './routes/dashboard'
 import { Route as IndexImport } from './routes/index'
-import { Route as PostsPostIdImport } from './routes/posts/$postId'
+import { Route as OverviewAnalyticsImport } from './routes/overview/analytics'
+import { Route as BlogPostsImport } from './routes/blog/posts'
+import { Route as BlogPostImport } from './routes/blog/$post'
 
 // Create/Update Routes
 
-const AboutRoute = AboutImport.update({
-  id: '/about',
-  path: '/about',
+const DashboardRoute = DashboardImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -29,9 +31,21 @@ const IndexRoute = IndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const PostsPostIdRoute = PostsPostIdImport.update({
-  id: '/posts/$postId',
-  path: '/posts/$postId',
+const OverviewAnalyticsRoute = OverviewAnalyticsImport.update({
+  id: '/overview/analytics',
+  path: '/overview/analytics',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const BlogPostsRoute = BlogPostsImport.update({
+  id: '/blog/posts',
+  path: '/blog/posts',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const BlogPostRoute = BlogPostImport.update({
+  id: '/blog/$post',
+  path: '/blog/$post',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -46,18 +60,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutImport
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardImport
       parentRoute: typeof rootRoute
     }
-    '/posts/$postId': {
-      id: '/posts/$postId'
-      path: '/posts/$postId'
-      fullPath: '/posts/$postId'
-      preLoaderRoute: typeof PostsPostIdImport
+    '/blog/$post': {
+      id: '/blog/$post'
+      path: '/blog/$post'
+      fullPath: '/blog/$post'
+      preLoaderRoute: typeof BlogPostImport
+      parentRoute: typeof rootRoute
+    }
+    '/blog/posts': {
+      id: '/blog/posts'
+      path: '/blog/posts'
+      fullPath: '/blog/posts'
+      preLoaderRoute: typeof BlogPostsImport
+      parentRoute: typeof rootRoute
+    }
+    '/overview/analytics': {
+      id: '/overview/analytics'
+      path: '/overview/analytics'
+      fullPath: '/overview/analytics'
+      preLoaderRoute: typeof OverviewAnalyticsImport
       parentRoute: typeof rootRoute
     }
   }
@@ -67,42 +95,63 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/posts/$postId': typeof PostsPostIdRoute
+  '/dashboard': typeof DashboardRoute
+  '/blog/$post': typeof BlogPostRoute
+  '/blog/posts': typeof BlogPostsRoute
+  '/overview/analytics': typeof OverviewAnalyticsRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/posts/$postId': typeof PostsPostIdRoute
+  '/dashboard': typeof DashboardRoute
+  '/blog/$post': typeof BlogPostRoute
+  '/blog/posts': typeof BlogPostsRoute
+  '/overview/analytics': typeof OverviewAnalyticsRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/posts/$postId': typeof PostsPostIdRoute
+  '/dashboard': typeof DashboardRoute
+  '/blog/$post': typeof BlogPostRoute
+  '/blog/posts': typeof BlogPostsRoute
+  '/overview/analytics': typeof OverviewAnalyticsRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/posts/$postId'
+  fullPaths:
+    | '/'
+    | '/dashboard'
+    | '/blog/$post'
+    | '/blog/posts'
+    | '/overview/analytics'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/posts/$postId'
-  id: '__root__' | '/' | '/about' | '/posts/$postId'
+  to: '/' | '/dashboard' | '/blog/$post' | '/blog/posts' | '/overview/analytics'
+  id:
+    | '__root__'
+    | '/'
+    | '/dashboard'
+    | '/blog/$post'
+    | '/blog/posts'
+    | '/overview/analytics'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
-  PostsPostIdRoute: typeof PostsPostIdRoute
+  DashboardRoute: typeof DashboardRoute
+  BlogPostRoute: typeof BlogPostRoute
+  BlogPostsRoute: typeof BlogPostsRoute
+  OverviewAnalyticsRoute: typeof OverviewAnalyticsRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
-  PostsPostIdRoute: PostsPostIdRoute,
+  DashboardRoute: DashboardRoute,
+  BlogPostRoute: BlogPostRoute,
+  BlogPostsRoute: BlogPostsRoute,
+  OverviewAnalyticsRoute: OverviewAnalyticsRoute,
 }
 
 export const routeTree = rootRoute
@@ -116,18 +165,26 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/about",
-        "/posts/$postId"
+        "/dashboard",
+        "/blog/$post",
+        "/blog/posts",
+        "/overview/analytics"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/about": {
-      "filePath": "about.tsx"
+    "/dashboard": {
+      "filePath": "dashboard.tsx"
     },
-    "/posts/$postId": {
-      "filePath": "posts/$postId.tsx"
+    "/blog/$post": {
+      "filePath": "blog/$post.tsx"
+    },
+    "/blog/posts": {
+      "filePath": "blog/posts.tsx"
+    },
+    "/overview/analytics": {
+      "filePath": "overview/analytics.tsx"
     }
   }
 }
