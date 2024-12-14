@@ -10,7 +10,7 @@ import { Flex } from 'antd';
 
 function Index() {
   const iconStyle =
-    'w-9 h-full hover:bg-[#ffffff40] flex justify-center text-[14px] text-white cursor-pointer';
+    'w-9 h-full flex justify-center text-[14px] text-white cursor-pointer hover:bg-[#ffffff40]';
   return (
     <Flex className="h-full">
       <SettingOutlined className={iconStyle} />
