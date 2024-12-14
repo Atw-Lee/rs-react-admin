@@ -2,8 +2,8 @@ import { Layout, Menu } from 'antd';
 import { useNavigate, useLocation } from '@tanstack/react-router';
 import { useAppStore } from '@/store';
 import { splitPathIntoSegments } from '@/utils/transform';
-
 const { Sider } = Layout;
+
 function Index() {
   const menu = useAppStore((state) => state.menu);
   const navigate = useNavigate();
