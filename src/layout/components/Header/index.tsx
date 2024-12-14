@@ -1,13 +1,14 @@
 import { Layout } from 'antd';
-import logo from '@/static/images/logo.svg';
-import { FormattedMessage } from 'react-intl';
+import LogoArea from './components/LogoArea';
+import ActionBar from './components/ActionBar';
 const { Header } = Layout;
 
 function Index() {
   return (
     <Header className="flex items-center">
-      <img src={logo} alt="logo" className="w-8 mr-4" />
-      <FormattedMessage id="AppName" />
+      <LogoArea />
+      <div className="flex h-full min-w-0 flex-1 items-center" />
+      <ActionBar />
     </Header>
   );
 }
