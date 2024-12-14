@@ -1,6 +1,6 @@
 import { Flex } from 'antd';
-import logo from '@/static/images/logo.svg';
 import { FormattedMessage } from 'react-intl';
+import logo from '@/static/images/logo.svg';
 
 function Index() {
   return (
