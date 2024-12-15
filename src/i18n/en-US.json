@@ -1,6 +1,9 @@
 {
   "app.name": "Rs React Admin",
   "app.copyright": "Released under the MIT License. \n app.copyright © 2025 RsReactAdmin",
+  "app.preference.appearance": "Appearance",
+  "app.preference.layout": "Layout",
+  "app.preference.general": "General",
   "en-US": "English",
   "zh-CN": "简体中文"
 }

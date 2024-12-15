@@ -3,6 +3,7 @@ import { Breadcrumb, Layout } from 'antd';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Sider from './components/Sider';
+import Preference from './components/Preference';
 
 const { Content } = Layout;
 
@@ -22,6 +23,7 @@ function Index() {
         </Layout>
       </Layout>
       <Footer />
+      <Preference />
     </Layout>
   );
 }
