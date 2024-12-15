@@ -7,12 +7,12 @@ import {
   SunOutlined,
 } from '@ant-design/icons';
 import { Flex, Dropdown } from 'antd';
-import { useFullscreenToggle } from '@/hooks/useFullscreenToggle';
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { i18nMessages } from '@/i18n';
 import { useAppStore } from '@/store';
 import { FormattedMessage } from 'react-intl';
-import { useTheme } from '@/hooks/useTheme';
+import useFullscreenToggle from '@/hooks/useFullscreenToggle';
+import useTheme from '@/hooks/useTheme';
 import useThemeAnimation from '@/hooks/useThemeAnimation';
 const iconStyle =
   'w-9 h-full flex justify-center text-[14px] text-white cursor-pointer hover:bg-[#ffffff40]';
@@ -34,13 +34,17 @@ function Index() {
   }, []);
   const [theme, setTheme] = useTheme();
   const toggleAnimationTheme = useThemeAnimation();
-  const toggleTheme = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    toggleAnimationTheme(e, theme === 'dark');
-    setTimeout(() => {
-      // TODO: It has no animation effect by accident
+  const toggleTheme = useCallback(
+    (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+      toggleAnimationTheme(e, theme === 'dark');
       setTheme(theme === 'light' ? 'dark' : 'light');
-    }, 50);
-  };
+      // setTimeout(() => {
+      //   // It has no animation effect by accident
+      //   setTheme(theme === 'light' ? 'dark' : 'light');
+      // }, 50);
+    },
+    [setTheme, theme, toggleAnimationTheme],
+  );
 
   return (
     <Flex className="h-full">

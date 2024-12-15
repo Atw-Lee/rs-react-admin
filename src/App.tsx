@@ -9,7 +9,7 @@ import { messageConfig, notificationConfig } from '@/const/antdConfig';
 import { router } from '@/router';
 import { ANTD_PREFIX_CLS, ANTD_ICON_PREFIX_CLS } from '@/const/const';
 import { useAppStore } from '@/store';
-import { useTheme } from '@/hooks/useTheme';
+import useTheme from '@/hooks/useTheme';
 
 const queryClient = new QueryClient();
 const App = () => {

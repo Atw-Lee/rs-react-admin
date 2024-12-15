@@ -2,7 +2,7 @@ import { Layout, Menu } from 'antd';
 import { useNavigate, useLocation } from '@tanstack/react-router';
 import { useAppStore } from '@/store';
 import { splitPathIntoSegments } from '@/utils/transform';
-import { useTheme } from '@/hooks/useTheme';
+import useTheme from '@/hooks/useTheme';
 const { Sider } = Layout;
 
 function Index() {

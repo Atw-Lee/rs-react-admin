@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useAppStore } from '@/store';
 
-export const useTheme = (): [
+const useTheme = (): [
   'light' | 'dark',
   (theme: 'light' | 'dark' | 'auto') => void,
 ] => {
@@ -36,3 +36,5 @@ export const useTheme = (): [
 
   return [currentTheme, setTheme];
 };
+
+export default useTheme;
