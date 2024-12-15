@@ -103,7 +103,6 @@ const useThemeAnimation = () => {
         root.classList.add(isDark ? 'light' : 'dark');
       })
       .ready.then(() => {
-        // eslint-disable-next-line no-console
         console.log(`Theme transition finished in ${Date.now() - time}ms`);
         const clipPath = [
           `circle(0px at ${x}px ${y}px)`,

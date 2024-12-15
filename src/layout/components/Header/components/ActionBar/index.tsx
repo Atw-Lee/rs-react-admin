@@ -36,12 +36,8 @@ function Index() {
   const toggleAnimationTheme = useThemeAnimation();
   const toggleTheme = useCallback(
     (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-      toggleAnimationTheme(e, theme === 'dark');
       setTheme(theme === 'light' ? 'dark' : 'light');
-      // setTimeout(() => {
-      //   // It has no animation effect by accident
-      //   setTheme(theme === 'light' ? 'dark' : 'light');
-      // }, 50);
+      toggleAnimationTheme(e, theme === 'dark');
     },
     [setTheme, theme, toggleAnimationTheme],
   );
