@@ -5,5 +5,5 @@ import zhRoutesMessages from '@/i18n/routes/zh-CN.json';
 
 export const i18nMessages = {
   'en-US': Object.assign(enMessages, enRoutesMessages),
-  'zh-CNS': Object.assign(zhMessages, zhRoutesMessages),
+  'zh-CN': Object.assign(zhMessages, zhRoutesMessages),
 };

@@ -1,6 +1,6 @@
 {
-  "AppName": "你的应用名称",
+  "AppName": "Rs React Admin",
   "copyright": "基于 MIT 许可发布. \n Copyright © 2025 RsReactAdmin",
-  "/overview/analytics": "分析页",
-  "/overview/": ""
+  "en-US": "English",
+  "zh-CN": "简体中文"
 }

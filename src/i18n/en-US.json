@@ -1,5 +1,6 @@
 {
-  "AppName": "Your Application Name",
+  "AppName": "Rs React Admin",
   "copyright": "Released under the MIT License. \n Copyright © 2025 RsReactAdmin",
-  "/overview/analytics": ""
+  "en-US": "English",
+  "zh-CN": "简体中文"
 }
