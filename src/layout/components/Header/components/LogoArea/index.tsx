@@ -6,7 +6,7 @@ function Index() {
   return (
     <Flex>
       <img src={logo} alt="logo" className="w-8 mr-4" />
-      <FormattedMessage id="AppName" />
+      <FormattedMessage id="app.name" />
     </Flex>
   );
 }

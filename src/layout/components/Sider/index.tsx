@@ -2,6 +2,7 @@ import { Layout, Menu } from 'antd';
 import { useNavigate, useLocation } from '@tanstack/react-router';
 import { useAppStore } from '@/store';
 import { splitPathIntoSegments } from '@/utils/transform';
+import { useTheme } from '@/hooks/useTheme';
 const { Sider } = Layout;
 
 function Index() {
@@ -10,6 +11,7 @@ function Index() {
   const pathname = useLocation({
     select: (location) => location.pathname,
   });
+  const [theme] = useTheme();
 
   const handleClick = ({ key }: { key: string }) => {
     navigate({
@@ -26,6 +28,7 @@ function Index() {
         onClick={handleClick}
         defaultSelectedKeys={[pathname]}
         defaultOpenKeys={splitPathIntoSegments(pathname)}
+        theme={theme}
       />
     </Sider>
   );

@@ -12,14 +12,14 @@ import { useMemo } from 'react';
 import { i18nMessages } from '@/i18n';
 import { useAppStore } from '@/store';
 import { FormattedMessage } from 'react-intl';
-
+import { useTheme } from '@/hooks/useTheme';
+import useThemeAnimation from '@/hooks/useThemeAnimation';
+const iconStyle =
+  'w-9 h-full flex justify-center text-[14px] text-white cursor-pointer hover:bg-[#ffffff40]';
 function Index() {
-  const iconStyle =
-    'w-9 h-full flex justify-center text-[14px] text-white cursor-pointer hover:bg-[#ffffff40]';
   const { isFullscreen, toggle } = useFullscreenToggle();
   const lang = useAppStore((state) => state.lang);
   const setLang = useAppStore((state) => state.setLang);
-
   const langs = useMemo(() => {
     const items = [];
     for (const key in i18nMessages) {
@@ -32,12 +32,24 @@ function Index() {
     }
     return items;
   }, []);
+  const [theme, setTheme] = useTheme();
+  const toggleAnimationTheme = useThemeAnimation();
+  const toggleTheme = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    toggleAnimationTheme(e, theme === 'dark');
+    setTimeout(() => {
+      // TODO: It has no animation effect by accident
+      setTheme(theme === 'light' ? 'dark' : 'light');
+    }, 50);
+  };
 
   return (
     <Flex className="h-full">
       <SettingOutlined className={iconStyle} />
-      <SunOutlined className={iconStyle} />
-      {/* <MoonOutlined /> */}
+      {theme === 'light' ? (
+        <MoonOutlined className={iconStyle} onClick={toggleTheme} />
+      ) : (
+        <SunOutlined className={iconStyle} onClick={toggleTheme} />
+      )}
       <Dropdown
         menu={{
           items: langs,

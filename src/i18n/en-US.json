@@ -1,6 +1,6 @@
 {
-  "AppName": "Rs React Admin",
-  "copyright": "Released under the MIT License. \n Copyright © 2025 RsReactAdmin",
+  "app.name": "Rs React Admin",
+  "app.app.copyright": "Released under the MIT License. \n app.copyright © 2025 RsReactAdmin",
   "en-US": "English",
   "zh-CN": "简体中文"
 }

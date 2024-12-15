@@ -1,6 +1,6 @@
 import { ThemeConfig } from 'antd';
 
-export const theme: ThemeConfig = {
+export const defaultTheme: ThemeConfig = {
   components: {
     Layout: {
       headerHeight: 44,
