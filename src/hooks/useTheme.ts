@@ -3,7 +3,7 @@ import { useAppStore } from '@/store';
 
 const useTheme = (): [
   'light' | 'dark',
-  (theme: 'light' | 'dark' | 'auto') => void,
+  (theme: 'light' | 'dark' | 'system') => void,
 ] => {
   const theme = useAppStore((state) => state.theme);
   const setTheme = useAppStore((state) => state.setTheme);

@@ -1,3 +1,6 @@
+import { useCallback, useMemo } from 'react';
+import { FormattedMessage } from 'react-intl';
+import { Flex, Dropdown } from 'antd';
 import {
   FullscreenExitOutlined,
   FullscreenOutlined,
@@ -6,11 +9,8 @@ import {
   SettingOutlined,
   SunOutlined,
 } from '@ant-design/icons';
-import { Flex, Dropdown } from 'antd';
-import { useCallback, useMemo } from 'react';
 import { i18nMessages } from '@/i18n';
 import { useAppStore } from '@/store';
-import { FormattedMessage } from 'react-intl';
 import useFullscreenToggle from '@/hooks/useFullscreenToggle';
 import useTheme from '@/hooks/useTheme';
 import useThemeAnimation from '@/hooks/useThemeAnimation';

@@ -1,9 +1,13 @@
 {
+  "en-US": "English",
+  "zh-CN": "简体中文",
   "app.name": "Rs React Admin",
   "app.copyright": "Released under the MIT License. \n app.copyright © 2025 RsReactAdmin",
   "app.preference.appearance": "Appearance",
   "app.preference.layout": "Layout",
   "app.preference.general": "General",
-  "en-US": "English",
-  "zh-CN": "简体中文"
+  "app.preference.appearance.theme": "Theme",
+  "app.preference.appearance.theme.light": "Light",
+  "app.preference.appearance.theme.dark": "Dark",
+  "app.preference.appearance.theme.system": "System"
 }

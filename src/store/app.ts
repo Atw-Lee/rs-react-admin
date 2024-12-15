@@ -3,7 +3,7 @@ import { create } from 'zustand';
 import { i18nMessages } from '@/i18n';
 
 type LayoutType = 'horizontal' | 'side' | 'side-inline' | 'none';
-type ThemeType = 'light' | 'dark' | 'auto';
+type ThemeType = 'light' | 'dark' | 'system';
 interface AppState {
   layout: LayoutType; // Handling the overall layout of a page.
   setLayout: (layout: LayoutType) => void;
@@ -34,6 +34,6 @@ export const useAppStore = create<AppState>((set) => ({
     set({ isPreferencePanelVisible: visible }),
   lang: 'en-US',
   setLang: (lang: keyof typeof i18nMessages) => set({ lang }),
-  theme: 'auto',
+  theme: 'system',
   setTheme: (theme: ThemeType) => set({ theme }),
 }));
