@@ -1,4 +1,5 @@
-import { MenuProps } from 'antd';
+import type { CSSProperties } from 'react';
+import type { MenuProps } from 'antd';
 import { create } from 'zustand';
 import { i18nMessages } from '@/i18n';
 
@@ -17,6 +18,8 @@ interface AppState {
   setLang: (lang: keyof typeof i18nMessages) => void;
   theme: ThemeType; // Theme
   setTheme: (theme: ThemeType) => void;
+  primaryColor: CSSProperties['color']; // Primary Color
+  setPrimaryColor: (primaryColor: CSSProperties['color']) => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
@@ -36,4 +39,7 @@ export const useAppStore = create<AppState>((set) => ({
   setLang: (lang: keyof typeof i18nMessages) => set({ lang }),
   theme: 'system',
   setTheme: (theme: ThemeType) => set({ theme }),
+  primaryColor: '#1677FF',
+  setPrimaryColor: (primaryColor: CSSProperties['color']) =>
+    set({ primaryColor }),
 }));

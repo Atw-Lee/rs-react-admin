@@ -10,6 +10,8 @@ type Props<T> = {
   onClick: (key: T) => void;
   id: T;
   active: boolean;
+  className?: string;
+  outlineBoxClassName?: string;
 };
 function Index<T>(props: Props<T>) {
   const { styles } = useStyle();
@@ -17,12 +19,15 @@ function Index<T>(props: Props<T>) {
 
   return (
     <div
-      className="flex cursor-pointer flex-col flex-1"
+      className={classNames([
+        'flex cursor-pointer flex-col flex-1',
+        props.className,
+      ])}
       onClick={() => props.onClick(props.id)}
     >
       <div
         className={classNames({
-          [`${styles.animationOutlineBox} ${ANTD_PREFIX_CLS}-outline-box text-center py-4`]:
+          [`${styles.animationOutlineBox} ${props.outlineBoxClassName} ${ANTD_PREFIX_CLS}-outline-box text-center py-4`]:
             true,
           [`${ANTD_PREFIX_CLS}-outline-box-active`]: props.active,
         })}

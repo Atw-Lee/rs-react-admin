@@ -1,6 +1,7 @@
 import { Flex } from 'antd';
 import { FormattedMessage } from 'react-intl';
 import Theme from './components/Theme';
+import ThemeColor from './components/ThemeColor';
 
 function Index() {
   const flexCls = 'flex flex-col py-4';
@@ -15,7 +16,10 @@ function Index() {
         <Theme />
       </Flex>
       <Flex className={flexCls}>
-        <h3 className={h3Cls}>内置主题</h3>
+        <h3 className={h3Cls}>
+          <FormattedMessage id="app.preference.appearance.primaryColor" />
+        </h3>
+        <ThemeColor />
       </Flex>
       <Flex className={flexCls}>
         <h3 className={h3Cls}>圆角</h3>

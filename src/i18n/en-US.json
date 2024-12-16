@@ -9,5 +9,18 @@
   "app.preference.appearance.theme": "Theme",
   "app.preference.appearance.theme.light": "Light",
   "app.preference.appearance.theme.dark": "Dark",
-  "app.preference.appearance.theme.system": "System"
+  "app.preference.appearance.theme.system": "System",
+  "app.preference.appearance.primaryColor": "Primary Color",
+  "app.preference.appearance.primaryColor.default": "Default",
+  "app.preference.appearance.primaryColor.dustRed": "Dust Red",
+  "app.preference.appearance.primaryColor.volcano": "Volcano",
+  "app.preference.appearance.primaryColor.sunsetOrange": "Sunset Orange",
+  "app.preference.appearance.primaryColor.calendulaGold": "Calendula Gold",
+  "app.preference.appearance.primaryColor.sunriseYellow": "Sunrise Yellow",
+  "app.preference.appearance.primaryColor.lime": "Lime",
+  "app.preference.appearance.primaryColor.polarGreen": "Polar Green",
+  "app.preference.appearance.primaryColor.cyan": "Cyan",
+  "app.preference.appearance.primaryColor.geekBlue": "Geek Blue",
+  "app.preference.appearance.primaryColor.goldenPurple": "Golden Purple",
+  "app.preference.appearance.primaryColor.magenta": "Magenta"
 }

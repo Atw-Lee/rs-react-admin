@@ -14,6 +14,7 @@ import useTheme from '@/hooks/useTheme';
 const queryClient = new QueryClient();
 const App = () => {
   const lang = useAppStore((state) => state.lang);
+  const colorPrimary = useAppStore((state) => state.primaryColor);
   const [theme] = useTheme();
   const algorithm = useMemo(
     () => AntTheme[theme === 'light' ? 'defaultAlgorithm' : 'darkAlgorithm'],
@@ -22,7 +23,13 @@ const App = () => {
 
   return (
     <ConfigProvider
-      theme={{ ...defaultTheme, algorithm }}
+      theme={{
+        ...defaultTheme,
+        algorithm,
+        token: {
+          colorPrimary,
+        },
+      }}
       prefixCls={ANTD_PREFIX_CLS}
       iconPrefixCls={ANTD_ICON_PREFIX_CLS}
     >

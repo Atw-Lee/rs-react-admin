@@ -9,5 +9,18 @@
   "app.preference.appearance.theme": "主题",
   "app.preference.appearance.theme.light": "浅色",
   "app.preference.appearance.theme.dark": "暗色",
-  "app.preference.appearance.theme.system": "跟随系统"
+  "app.preference.appearance.theme.system": "跟随系统",
+  "app.preference.appearance.primaryColor": "主题色",
+  "app.preference.appearance.primaryColor.default": "默认",
+  "app.preference.appearance.primaryColor.dustRed": "薄暮",
+  "app.preference.appearance.primaryColor.volcano": "火山",
+  "app.preference.appearance.primaryColor.sunsetOrange": "日暮",
+  "app.preference.appearance.primaryColor.calendulaGold": "金盏花",
+  "app.preference.appearance.primaryColor.sunriseYellow": "日出",
+  "app.preference.appearance.primaryColor.lime": "青柠",
+  "app.preference.appearance.primaryColor.polarGreen": "极光绿",
+  "app.preference.appearance.primaryColor.cyan": "明青",
+  "app.preference.appearance.primaryColor.geekBlue": "极客蓝",
+  "app.preference.appearance.primaryColor.goldenPurple": "酱紫",
+  "app.preference.appearance.primaryColor.magenta": "法式洋红"
 }
