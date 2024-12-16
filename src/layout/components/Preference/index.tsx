@@ -2,7 +2,7 @@ import { useAppStore } from '@/store';
 import { Drawer, Segmented } from '@/components';
 import { useIntl } from 'react-intl';
 import { useMemo, useState } from 'react';
-import Appearance from './appearance';
+import Appearance from './components/Appearance';
 
 function Index() {
   const open = useAppStore((state) => state.isPreferencePanelVisible);

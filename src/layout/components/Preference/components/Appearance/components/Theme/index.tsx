@@ -1,13 +1,13 @@
 import { Flex } from 'antd';
-import Box from '../Box';
 import {
   ClockCircleOutlined,
   MoonOutlined,
   SunOutlined,
 } from '@ant-design/icons';
 import { useMemo } from 'react';
-import { useAppStore } from '@/store';
 import { useIntl } from 'react-intl';
+import { useAppStore } from '@/store';
+import OutlineBox from '@/components/OutlineBox';
 
 function Index() {
   const intl = useIntl();
@@ -35,7 +35,7 @@ function Index() {
   return (
     <Flex gap={20}>
       {themeOptions.map((item) => (
-        <Box
+        <OutlineBox
           key={item.key}
           id={item.key}
           text={intl.formatMessage({
@@ -45,7 +45,7 @@ function Index() {
           active={theme === item.key}
         >
           {item.icon}
-        </Box>
+        </OutlineBox>
       ))}
     </Flex>
   );
