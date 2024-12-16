@@ -25,7 +25,7 @@ function Index() {
             size="small"
             value={primaryColor}
             onChangeComplete={(color) => {
-              setPrimaryColor(color.toHex());
+              setPrimaryColor(`#${color.toHex()}`);
             }}
           />
         </h3>

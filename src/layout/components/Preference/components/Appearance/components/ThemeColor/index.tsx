@@ -10,12 +10,11 @@ function Index() {
   const { token } = useToken();
   const primaryColor = useAppStore((state) => state.primaryColor);
   const setPrimaryColor = useAppStore((state) => state.setPrimaryColor);
-
   const options = useMemo<{ key: string; color: CSSProperties['color'] }[]>(
     () => [
       {
         key: 'default',
-        color: '#1677FF',
+        color: '#1677ff',
       },
       {
         key: 'dustRed',
