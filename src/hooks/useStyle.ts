@@ -9,6 +9,11 @@ const useStyle = createStyles(({ prefixCls, css, token }) => ({
       outline-color: ${token.colorSplit};
       outline-style: solid;
       outline-width: 1px;
+      &.${prefixCls}-outline-box-active {
+        outline-color: ${token.colorPrimary};
+        outline-style: solid;
+        outline-width: 2px;
+      }
       &::after {
         border-radius: ${token.borderRadius}px;
         height: 0;
@@ -27,7 +32,7 @@ const useStyle = createStyles(({ prefixCls, css, token }) => ({
         animation-duration: 0.3s;
         content: '';
       }
-      :not(.outline-box-active):hover:after {
+      :not(.${prefixCls}-outline-box-active):hover:after {
         height: 100%;
         left: 0;
         opacity: 1;

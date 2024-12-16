@@ -1,20 +1,31 @@
 import { ReactNode } from 'react';
 import { theme } from 'antd';
+import classNames from 'classnames';
 import useStyle from '@/hooks/useStyle';
 import { ANTD_PREFIX_CLS } from '@/const/const';
 const { useToken } = theme;
-type Props = {
+type Props<T> = {
   children: ReactNode;
   text: string;
+  onClick: (key: T) => void;
+  id: T;
+  active: boolean;
 };
-function Index(props: Props) {
+function Index<T>(props: Props<T>) {
   const { styles } = useStyle();
   const { token } = useToken();
 
   return (
-    <div className="flex cursor-pointer flex-col flex-1">
+    <div
+      className="flex cursor-pointer flex-col flex-1"
+      onClick={() => props.onClick(props.id)}
+    >
       <div
-        className={`${styles.animationOutlineBox} ${ANTD_PREFIX_CLS}-outline-box text-center py-4`}
+        className={classNames({
+          [`${styles.animationOutlineBox} ${ANTD_PREFIX_CLS}-outline-box text-center py-4`]:
+            true,
+          [`${ANTD_PREFIX_CLS}-outline-box-active`]: props.active,
+        })}
       >
         {props.children}
       </div>
