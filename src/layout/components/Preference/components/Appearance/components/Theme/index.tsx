@@ -14,7 +14,7 @@ function Index() {
   const theme = useAppStore((state) => state.theme);
   const setTheme = useAppStore((state) => state.setTheme);
 
-  const themeOptions = useMemo<{ key: typeof theme; icon: React.ReactNode }[]>(
+  const options = useMemo<{ key: typeof theme; icon: React.ReactNode }[]>(
     () => [
       {
         key: 'light',
@@ -34,7 +34,7 @@ function Index() {
 
   return (
     <Flex gap={20}>
-      {themeOptions.map((item) => (
+      {options.map((item) => (
         <OutlineBox
           key={item.key}
           id={item.key}

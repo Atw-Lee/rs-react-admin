@@ -1,10 +1,10 @@
 import { Flex, ColorPicker } from 'antd';
 import { FormattedMessage } from 'react-intl';
+import classNames from 'classnames';
 import { useAppStore } from '@/store';
 import Theme from './components/Theme';
 import ThemeColor from './components/ThemeColor';
 import Rounded from './components/Rounded';
-import classNames from 'classnames';
 
 function Index({ className }: { className: string }) {
   const flexCls = 'flex flex-col py-4';

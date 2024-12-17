@@ -4,7 +4,7 @@ import { Segmented } from 'antd';
 import { useAppStore } from '@/store';
 import { Drawer } from '@/components';
 import Appearance from './components/Appearance';
-import classNames from 'classnames';
+import Layout from './components/Layout';
 
 function Index() {
   const open = useAppStore((state) => state.isPreferencePanelVisible);
@@ -35,6 +35,7 @@ function Index() {
     >
       <Segmented options={options} block value={value} onChange={setValue} />
       <Appearance className={value === 'appearance' ? 'block' : 'hidden'} />
+      <Layout className={value === 'layout' ? 'block' : 'hidden'} />
     </Drawer>
   );
 }

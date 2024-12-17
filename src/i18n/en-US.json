@@ -5,8 +5,6 @@
   "app.copyright": "Released under the MIT License. \n Copyright © 2025 RsReactAdmin",
   "app.preference": "Preferences",
   "app.preference.appearance": "Appearance",
-  "app.preference.layout": "Layout",
-  "app.preference.general": "General",
   "app.preference.appearance.theme": "Theme",
   "app.preference.appearance.theme.light": "Light",
   "app.preference.appearance.theme.dark": "Dark",
@@ -24,5 +22,11 @@
   "app.preference.appearance.primaryColor.geekBlue": "Geek Blue",
   "app.preference.appearance.primaryColor.goldenPurple": "Golden Purple",
   "app.preference.appearance.primaryColor.magenta": "Magenta",
-  "app.preference.appearance.radius": "Radius"
+  "app.preference.appearance.radius": "Radius",
+  "app.preference.layout": "Layout",
+  "app.preference.layout.horizontal": "Horizontal",
+  "app.preference.layout.side": "Side",
+  "app.preference.layout.side-inline": "Side Inline",
+  "app.preference.layout.none": "Full Content",
+  "app.preference.general": "General"
 }
