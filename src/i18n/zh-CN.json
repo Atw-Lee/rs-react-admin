@@ -3,6 +3,7 @@
   "zh-CN": "简体中文",
   "app.name": "Rs React Admin",
   "app.copyright": "基于 MIT 许可发布. \n Copyright © 2025 RsReactAdmin",
+  "app.preference": "偏好设置",
   "app.preference.appearance": "外观",
   "app.preference.layout": "布局",
   "app.preference.general": "通用",
@@ -22,5 +23,6 @@
   "app.preference.appearance.primaryColor.cyan": "明青",
   "app.preference.appearance.primaryColor.geekBlue": "极客蓝",
   "app.preference.appearance.primaryColor.goldenPurple": "酱紫",
-  "app.preference.appearance.primaryColor.magenta": "法式洋红"
+  "app.preference.appearance.primaryColor.magenta": "法式洋红",
+  "app.preference.appearance.radius": "圆角"
 }

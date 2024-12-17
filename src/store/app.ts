@@ -20,6 +20,8 @@ interface AppState {
   setTheme: (theme: ThemeType) => void;
   primaryColor: CSSProperties['color']; // Primary Color
   setPrimaryColor: (primaryColor: CSSProperties['color']) => void;
+  rounded: number; // BorderRadius
+  setRounded: (rounded: number) => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
@@ -42,4 +44,6 @@ export const useAppStore = create<AppState>((set) => ({
   primaryColor: '#1677FF',
   setPrimaryColor: (primaryColor: CSSProperties['color']) =>
     set({ primaryColor }),
+  rounded: 6,
+  setRounded: (rounded: number) => set({ rounded }),
 }));

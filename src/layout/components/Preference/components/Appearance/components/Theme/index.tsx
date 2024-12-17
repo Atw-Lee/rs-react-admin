@@ -7,7 +7,7 @@ import {
 import { useMemo } from 'react';
 import { useIntl } from 'react-intl';
 import { useAppStore } from '@/store';
-import OutlineBox from '@/components/OutlineBox';
+import { OutlineBox } from '@/components';
 
 function Index() {
   const intl = useIntl();

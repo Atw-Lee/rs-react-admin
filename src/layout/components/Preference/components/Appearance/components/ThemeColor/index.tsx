@@ -2,7 +2,7 @@ import { Flex, theme } from 'antd';
 import { CSSProperties, useMemo } from 'react';
 import { useIntl } from 'react-intl';
 import { useAppStore } from '@/store';
-import OutlineBox from '@/components/OutlineBox';
+import { OutlineBox } from '@/components';
 const { useToken } = theme;
 
 function Index() {

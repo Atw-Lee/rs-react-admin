@@ -3,6 +3,7 @@
   "zh-CN": "简体中文",
   "app.name": "Rs React Admin",
   "app.copyright": "Released under the MIT License. \n Copyright © 2025 RsReactAdmin",
+  "app.preference": "Preferences",
   "app.preference.appearance": "Appearance",
   "app.preference.layout": "Layout",
   "app.preference.general": "General",
@@ -22,5 +23,6 @@
   "app.preference.appearance.primaryColor.cyan": "Cyan",
   "app.preference.appearance.primaryColor.geekBlue": "Geek Blue",
   "app.preference.appearance.primaryColor.goldenPurple": "Golden Purple",
-  "app.preference.appearance.primaryColor.magenta": "Magenta"
+  "app.preference.appearance.primaryColor.magenta": "Magenta",
+  "app.preference.appearance.radius": "Radius"
 }

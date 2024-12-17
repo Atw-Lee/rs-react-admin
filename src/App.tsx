@@ -15,6 +15,7 @@ const queryClient = new QueryClient();
 const App = () => {
   const lang = useAppStore((state) => state.lang);
   const colorPrimary = useAppStore((state) => state.primaryColor);
+  const borderRadius = useAppStore((state) => state.rounded);
   const [theme] = useTheme();
   const algorithm = useMemo(
     () => AntTheme[theme === 'light' ? 'defaultAlgorithm' : 'darkAlgorithm'],
@@ -28,6 +29,7 @@ const App = () => {
         algorithm,
         token: {
           colorPrimary,
+          borderRadius,
         },
       }}
       prefixCls={ANTD_PREFIX_CLS}

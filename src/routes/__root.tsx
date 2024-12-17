@@ -22,7 +22,7 @@ function RootComponent() {
   return (
     <>
       <Layout />
-      <TanStackRouterDevtools position="bottom-right" />
+      <TanStackRouterDevtools />
       <ReactQueryDevtools />
     </>
   );
