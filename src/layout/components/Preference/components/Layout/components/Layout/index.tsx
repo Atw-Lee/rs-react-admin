@@ -18,19 +18,19 @@ function Index() {
         layout: (
           <Layout className="rounded-[inherit] overflow-hidden">
             <Header
-              className="h-7 leading-7 text-xs text-center"
+              className="h-7 leading-7 text-[10px] text-center"
               style={{ backgroundColor: token.colorPrimaryHover }}
             >
               Header
             </Header>
             <Content
-              className="h-11 leading-[44px] text-center text-xs text-white"
+              className="h-11 leading-[44px] text-center text-[10px] text-white"
               style={{ backgroundColor: token.colorPrimaryActive }}
             >
               Content
             </Content>
             <Footer
-              className="h-7 leading-7 p-0 text-xs text-center text-white"
+              className="h-7 leading-7 p-0 text-[10px] text-center text-white"
               style={{ backgroundColor: token.colorPrimaryHover }}
             >
               Footer
@@ -44,26 +44,26 @@ function Index() {
           <Layout className="rounded-[inherit] overflow-hidden relative">
             <Sider
               width="30%"
-              className="pt-6 text-white"
+              className="pt-6 text-white text-[10px]"
               style={{ backgroundColor: token.colorPrimary }}
             >
               Side
             </Sider>
             <Layout>
               <Header
-                className="h-7 leading-7 text-xs text-center"
+                className="h-7 leading-7 text-[10px] text-center"
                 style={{ backgroundColor: token.colorPrimaryHover }}
               >
                 Header
               </Header>
               <Content
-                className="h-11 leading-[44px] text-center text-xs text-white"
+                className="h-11 leading-[44px] text-center text-[10px] text-white"
                 style={{ backgroundColor: token.colorPrimaryActive }}
               >
                 Content
               </Content>
               <Footer
-                className="h-7 leading-7 p-0 text-xs text-center text-white"
+                className="h-7 leading-7 p-0 text-[10px] text-center text-white"
                 style={{ backgroundColor: token.colorPrimaryHover }}
               >
                 Footer
@@ -77,7 +77,7 @@ function Index() {
         layout: (
           <Layout className="rounded-[inherit] overflow-hidden relative">
             <Header
-              className="h-7 leading-7 text-xs text-center"
+              className="h-7 leading-7 text-[10px] text-center"
               style={{ backgroundColor: token.colorPrimaryHover }}
             >
               Header
@@ -85,13 +85,13 @@ function Index() {
             <Layout>
               <Sider
                 width="30%"
-                className="pt-2 text-white"
+                className="pt-2 text-white text-[10px]"
                 style={{ backgroundColor: token.colorPrimary }}
               >
                 Side
               </Sider>
               <Content
-                className="h-11 leading-[44px] text-center text-xs text-white"
+                className="h-11 leading-[44px] text-center text-[10px] text-white"
                 style={{ backgroundColor: token.colorPrimaryActive }}
               >
                 Content
@@ -99,7 +99,7 @@ function Index() {
             </Layout>
 
             <Footer
-              className="h-7 leading-7 p-0 text-xs text-center text-white"
+              className="h-7 leading-7 p-0 text-[10px] text-center text-white"
               style={{ backgroundColor: token.colorPrimaryHover }}
             >
               Footer
@@ -112,8 +112,8 @@ function Index() {
         layout: (
           <Layout className="rounded-[inherit] overflow-hidden">
             <Content
-              className="h-[100px] leading-[100px] text-white"
-              style={{ backgroundColor: token.colorPrimaryActive }}
+              className="h-[100px] leading-[100px] text-white text-[10px]"
+              style={{ backgroundColor: token.colorPrimaryHover }}
             >
               Content
             </Content>
