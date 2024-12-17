@@ -5,10 +5,10 @@ import { ConfigProvider, App as AntDApp, theme as AntTheme } from 'antd';
 import { IntlProvider } from 'react-intl';
 import { i18nMessages } from '@/i18n';
 import { defaultTheme } from '@/const/theme';
-import { messageConfig, notificationConfig } from '@/const/antdConfig';
-import { router } from '@/router';
-import { ANTD_PREFIX_CLS, ANTD_ICON_PREFIX_CLS } from '@/const/const';
 import { useAppStore } from '@/store';
+import { router } from '@/router';
+import { messageConfig, notificationConfig } from '@/const/antdConfig';
+import { ANTD_PREFIX_CLS, ANTD_ICON_PREFIX_CLS } from '@/const/const';
 import useTheme from '@/hooks/useTheme';
 
 const queryClient = new QueryClient();

@@ -1,10 +1,8 @@
-import { createRootRoute, useRouter } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/router-devtools';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import Layout from '@/layout';
-import { transformRoutesToMenu } from '@/utils/transform';
 import { useEffect } from 'react';
+import { createRootRoute, useRouter } from '@tanstack/react-router';
+import { transformRoutesToMenu } from '@/utils/transform';
 import { useAppStore } from '@/store';
+import Layout from '@/layout';
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -19,11 +17,5 @@ function RootComponent() {
     setMenu(menu);
   }, [router.routesByPath, setMenu]);
 
-  return (
-    <>
-      <Layout />
-      <TanStackRouterDevtools />
-      <ReactQueryDevtools />
-    </>
-  );
+  return <Layout />;
 }
