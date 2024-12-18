@@ -26,11 +26,14 @@ function Index<T>(props: Props<T>) {
       onClick={() => props.onClick(props.id)}
     >
       <div
-        className={classNames({
-          [`${styles.animationOutlineBox} ${props.outlineBoxClassName} ${ANTD_PREFIX_CLS}-outline-box text-center py-4`]:
-            true,
-          [`${ANTD_PREFIX_CLS}-outline-box-active`]: props.active,
-        })}
+        className={classNames(
+          props.outlineBoxClassName,
+          styles.animationOutlineBox,
+          `${ANTD_PREFIX_CLS}-outline-box text-center`,
+          {
+            [`${ANTD_PREFIX_CLS}-outline-box-active`]: props.active,
+          },
+        )}
       >
         {props.children}
       </div>

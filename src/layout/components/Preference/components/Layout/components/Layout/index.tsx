@@ -136,7 +136,7 @@ function Index() {
           onClick={setLayout}
           active={layout === item.key}
           className="flex-1 basis-[calc(50%-15px)]"
-          outlineBoxClassName="py-1 px-1"
+          outlineBoxClassName="p-1"
         >
           {item.layout}
         </OutlineBox>

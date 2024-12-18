@@ -43,6 +43,7 @@ function Index() {
           })}
           onClick={setTheme}
           active={theme === item.key}
+          outlineBoxClassName="py-4"
         >
           {item.icon}
         </OutlineBox>
