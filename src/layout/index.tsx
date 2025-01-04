@@ -1,12 +1,11 @@
 import { Layout } from 'antd';
-import { Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/router-devtools';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import classNames from 'classnames';
 import { useAppStore } from '@/store';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Sider from './components/Sider';
+import Tabs from './components/Tabs';
 import Preference from './components/Preference';
 
 const { Content } = Layout;
@@ -28,7 +27,7 @@ function Index() {
 
           {/* Content 区域 */}
           <Content>
-            <Outlet />
+            <Tabs />
           </Content>
         </Layout>
 
