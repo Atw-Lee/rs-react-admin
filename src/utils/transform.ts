@@ -88,12 +88,19 @@ export function transformRoutesToMenu(routes: Routes) {
 }
 
 export function transformRouteToTabs(route: Routes[number]) {
-  const { name, icon } = route.options.staticData as Record<string, ReactNode>;
+  const {
+    name,
+    icon,
+    closable = true,
+  } = route.options.staticData as Tabs[number] & {
+    name: ReactNode;
+  };
 
   const tab: Tabs[number] = {
     key: route.id,
     label: name,
-    icon: icon,
+    icon,
+    closable,
   };
 
   return tab;

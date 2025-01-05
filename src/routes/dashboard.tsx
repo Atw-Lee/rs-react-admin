@@ -9,6 +9,7 @@ export const Route = createFileRoute('/dashboard')({
   staticData: {
     name: <FormattedMessage id="/dashboard" />,
     icon: <DashboardOutlined />,
+    closable: false,
   },
 });
 

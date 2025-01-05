@@ -9,7 +9,7 @@ import './index.less';
 const { Content } = Layout;
 
 function Index() {
-  const { tabs } = useTabs();
+  const { tabs, closeTab } = useTabs();
   const go = useGO();
   const pathname = useLocation({
     select: (location) => location.pathname,
@@ -26,10 +26,12 @@ function Index() {
         type="editable-card"
         hideAdd
         items={tabs.map((tab) => ({
-          key: tab.key,
-          label: tab.label,
+          ...tab,
           children: <Outlet />,
         }))}
+        onEdit={(e, action) => {
+          if (action === 'remove') closeTab(e as string);
+        }}
       />
     </Content>
   );
