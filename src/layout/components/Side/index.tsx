@@ -43,7 +43,7 @@ function Index() {
         className="h-full"
         items={menu}
         onClick={handleClick}
-        defaultSelectedKeys={[pathname]}
+        selectedKeys={[pathname]}
         defaultOpenKeys={splitPathIntoSegments(pathname)}
         theme={theme}
       />
