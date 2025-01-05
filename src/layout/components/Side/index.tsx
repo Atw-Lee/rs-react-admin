@@ -1,23 +1,40 @@
 import { Layout, Menu } from 'antd';
-import { useNavigate, useLocation } from '@tanstack/react-router';
+import { useLocation } from '@tanstack/react-router';
 import { useAppStore } from '@/store';
-import { splitPathIntoSegments } from '@/utils/transform';
 import useTheme from '@/hooks/useTheme';
+import useGO from '@/hooks/useGO';
 const { Sider } = Layout;
 
 function Index() {
   const menu = useAppStore((state) => state.menu);
-  const navigate = useNavigate();
   const pathname = useLocation({
     select: (location) => location.pathname,
   });
   const [theme] = useTheme();
+  const go = useGO();
 
   const handleClick = ({ key }: { key: string }) => {
-    navigate({
-      to: key,
-    });
+    go(key);
   };
+
+  function splitPathIntoSegments(path: string) {
+    if (!path || typeof path !== 'string') {
+      throw new Error('Invalid input: path must be a non-empty string');
+    }
+
+    const segments = [];
+    let currentSegment = '';
+
+    for (const part of path.split('/')) {
+      if (part) {
+        // 跳过空段
+        currentSegment += `/${part}`;
+        segments.push(currentSegment);
+      }
+    }
+
+    return segments;
+  }
 
   return (
     <Sider>

@@ -5,6 +5,7 @@ import type {
   TrailingSlashOption,
 } from '@tanstack/react-router';
 import type { ItemType, SubMenuType } from 'antd/es/menu/interface';
+import { Tabs } from '@/store';
 
 type Route = AnyRoute & {
   name: ReactNode;
@@ -13,9 +14,13 @@ type Route = AnyRoute & {
   parentIcon?: ReactNode;
 };
 
-export function transformRoutesToMenu(
-  routes: Router<Route, TrailingSlashOption, boolean>['routesByPath'],
-) {
+export type Routes = Router<
+  Route,
+  TrailingSlashOption,
+  boolean
+>['routesByPath'];
+
+export function transformRoutesToMenu(routes: Routes) {
   const menuMap: Record<string, ItemType> = {}; // 存储已处理的菜单节点
   const result: ItemType[] = []; // 最终返回的菜单树
 
@@ -82,21 +87,14 @@ export function transformRoutesToMenu(
   return result;
 }
 
-export function splitPathIntoSegments(path: string) {
-  if (!path || typeof path !== 'string') {
-    throw new Error('Invalid input: path must be a non-empty string');
-  }
+export function transformRouteToTabs(route: Routes[number]) {
+  const { name, icon } = route.options.staticData as Record<string, ReactNode>;
 
-  const segments = [];
-  let currentSegment = '';
+  const tab: Tabs[number] = {
+    key: route.id,
+    label: name,
+    icon: icon,
+  };
 
-  for (const part of path.split('/')) {
-    if (part) {
-      // 跳过空段
-      currentSegment += `/${part}`;
-      segments.push(currentSegment);
-    }
-  }
-
-  return segments;
+  return tab;
 }

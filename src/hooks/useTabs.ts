@@ -1,9 +1,12 @@
-import { useTabsStore } from '@/store';
+import { Tabs, useTabsStore } from '@/store';
 
 function Index() {
   const tabs = useTabsStore((state) => state.tabs);
+  const setTabs = useTabsStore((state) => state.setTabs);
 
-  const addTab = (tab: string) => tabs.add(tab);
+  const addTab = (tab: Tabs[number]) => {
+    setTabs([...tabs, tab]);
+  };
 
   return { tabs, addTab };
 }
