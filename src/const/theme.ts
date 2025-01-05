@@ -9,5 +9,8 @@ export const defaultTheme: ThemeConfig = {
       headerColor: '#fff',
       footerPadding: '11px 16px',
     },
+    Tabs: {
+      horizontalMargin: '0',
+    },
   },
 };

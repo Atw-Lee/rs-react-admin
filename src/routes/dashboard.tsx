@@ -18,6 +18,7 @@ function RouteComponent() {
     <div>
       Hello "/dashboard"!
       <Input value={value} onChange={(e) => setValue(e.target.value)} />
+      <div className="h-[1024px]"></div>
     </div>
   );
 }
